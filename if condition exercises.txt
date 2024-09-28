@@ -1,0 +1,139 @@
+Equality Operator Exercise:
+write an if condtiion that takes in membership from user and he will
+choose what to bu and it has a price nad based off his membership 
+a ceretain price will be discounted 
+
+def calculate_discount(level):
+    if level == "gold":
+        return 0.30
+    elif level == "silver":
+        return 0.20
+    elif level == "bronze":
+        return 0.10
+    else:
+        return 0.0
+
+membership_level = "silver"
+price = 100
+discount = calculate_discount(membership_level)
+print(f"Your final price after discount is: ${price - (price * discount)}")
+________________________________________________________________________
+
+
+Comparison Operator Exercise:
+-take the user input and check if a number is between 1 and 20
+
+
+
+-given a tempearture reading check if tha tempreature is hot cold ore moderate 
+temperature = 32
+if temperature > 30:
+    print("It's hot!")
+elif temperature < 15:
+    print("It's cold!")
+else:
+    print("It's moderate.")
+
+________________________________________________________________________
+
+
+Logical Operator Exercise
+-take user input and check if a number is both even and greater than 10
+
+-take user input and check if he can register for contest he must be older than 18 and must agree to the terms
+def can_register(age, agreed_to_terms):
+    if age > 18 and agreed_to_terms:
+        return "You can register"
+    return "You cannot register"
+________________________________________________________________________
+
+
+functions
+-use a function to check if a number is negative or positive
+
+
+
+
+
+-use this function
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+then use it to check if a user input is prime or not 
+
+
+________________________________________________________________________
+
+lists
+-check if a list has more than 5 elements 
+
+list with indexes
+-take the user input and check if the first item in the list of grocieries is the same as user input
+groceries = ["Milk", "Eggs", "Bread"]
+if groceries[0] == "Milk":
+    print("You have Milk in your grocery list.")
+________________________________________________________________________
+
+
+membership operator "in"
+-check if an item is in a list
+ 
+-check if a user is on the list of registered atendees
+attendees = ["Alice", "Bob", "Charlie"]
+if "Alice" in attendees:
+    print("Alice is attending the conference.")
+________________________________________________________________________
+
+identity is
+???ask for exercises
+
+________________________________________________________________________
+
+
+ternary condition
+-check if a restuarent is opne or closed ased on the current hour in one line 
+
+current_hour = 21
+status = "Open" if 9 <= current_hour < 22 else "Closed"
+print(f"The restaurant is {status}.")
+________________________________________________________________________
+
+
+chained comparison
+-checkif a person weight falls within the healthy range for the height
+
+def is_healthy_weight(weight, height):
+    if 18.5 <= weight / (height ** 2) <= 24.9:
+        return "You have a healthy weight."
+    return "Your weight is outside the healthy range."
+________________________________________________________________________
+
+
+type checking isinsatne() 
+-check if a variable is a dictionary
+user_data = {"name": "Alice", "age": 30}
+if isinstance(user_data, dict):
+    print("The data is stored as a dictionary.")
+
+________________________________________________________________________
+
+truthy falsy exercising 
+-check if shopping cart is empty or not 
+cart = []
+if not cart:
+    print("Your shopping cart is empty.")
+
+
+-check if username and password are oth filled in before moving into authentication
+username = "user123"
+password = ""
+
+if username and password:
+    print("Proceeding with authentication...")
+else:
+    print("Both username and password must be provided.")
